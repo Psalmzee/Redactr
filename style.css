@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,500&display=swap');
+
+
+:root {
+  --mustard: #E3B448;
+  --sage: #CBD18F;
+  --forestGreen: #3A6B35;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--forestGreen);
+  font-size: 62.5%;
+  padding: 3rem;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 55rem;
+  font-size: 1rem;
+  padding: 3rem;
+  background: var(--forestGreen);
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: -0.5rem -0.5rem 1rem rgba(255, 255, 255, 0.1),                    0.5rem 0.5rem 1.5rem rgba(20, 50, 20, 0.3);
+}
+
+main h2 {
+  color: var(--sage);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+  font-size: 2.3rem;
+  margin: 1rem;
+}
+
+main article {
+  text-align: left;
+  margin: 2rem;
+  width: 35rem;
+  position: relative;
+}
+
+main article .inputBox {
+  margin-top: 2rem;
+}
+
+main article .inputBox label {
+  display: block;
+  color: var(--sage);
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+main article .inputBox .input {
+  width: 100%;
+  height: 3rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  background: var(--forestGreen);
+  color: var(--mustard);
+  font-size: 1.1rem;
+  box-shadow: inset -0.2rem -0.2rem .6rem rgba(255, 255, 255, 0.2), inset 0.2rem 0.2rem 1rem rgba(10, 40, 10, 0.5);
+
+}
+
+main article .inputBox .textarea {
+  padding: .6rem 1rem;
+  height: 7rem;
+}
+
+.copyShare {
+  display: flex;
+  justify-content: space-around;
+}
+
+.copyShare * {
+  width: 5rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#redact-btn {
+  padding: 1rem 2rem;
+  font-size: .9rem;
+}
+
+.btn {
+  margin: .5rem;
+  padding: .5rem 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s;
+  font-size: 0.75rem;
+  font-weight: 600;
+/*   position: relative; */
+  text-transform: uppercase;
+  border-radius: .8rem;  
+  -webkit-tap-highlight-color: transparent;
+  color: var(--mustard);
+  background: var(--forestGreen);
+  box-shadow: -0.2rem -0.2rem .4rem rgba(255, 255, 255, 0.1),                  0.2rem 0.2rem 1rem rgba(10, 50, 10, 0.3);
+}
+
+.btn:hover {
+  transform: translateY(-.2rem);
+}
+
+.btn:active, .pinned {
+  box-shadow: -0.05rem -0.05rem .2rem rgba(255, 255, 255, 0.1), 0.05rem 0.05rem .6rem rgba(10, 50, 10, 0.3);
+  border: none;
+  outline: none;
+  transform: translateY(0rem);
+/*   position: abosolute;
+  animation: btn .2s; */
+}
+
+.pinned {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+#main-texts::selection, body *::selection {
+  background-color: var(--sage);
+  color: var(--forestGreen);
+}
+
+main article .inputBox .input::placeholder {
+  color: var(--mustard);
+  opacity: 50%;
+}
+
+/* STATS */
+
+aside {
+  margin: 2rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+aside h3 {
+  color: var(--sage);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  font-size: 1.5rem;
+  display: block;
+  border-bottom: .2rem double var(--sage);
+  width: 25rem;
+  padding: .7rem;
+}
+
+.statRec {
+  margin: 1rem;
+  width: 30rem;
+}
+
+.statRec > div {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statRec div > span {
+  display: inline-block;
+  padding: 0rem 1rem;
+  color: var(--sage);
+}
+
+.statVal {
+  display: inline-block;
+  width: 5rem;
+  padding: 15rem;
+  position: relative;
+}
+
+.timed {
+  position: relative;
+  top: 0;
+  left: .8rem;
+}
+
+footer {
+  color: var(--mustard);
+  font-size: .8rem;
+}
+
+label > span {
+  font-size: .8rem;
+}
+
+.quest {
+  margin: 0;
+  font-size: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+}
+
+/* HEADER */
+
+header {
+  width:100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.close {
+  visibility: hidden;
+  z-index: 2000;
+  position: fixed;
+  top: 2rem;
+  padding: .8rem 1.1rem !important;
+  border-radius: 50%;
+/*   display: none; */
+}
+
+
+
+/* NAVIGATION */
+
+nav {
+  width: 100%;
+  background-color: var(--sage);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all .3s;
+  padding: 3rem;
+  opacity: 0; 
+  visibility: hidden;
+  height: 0;
+}
+
+nav a {
+  color: var(--forestGreen);
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-transform: none;
+  font-weight: 400;
+  position: relative;
+  max-width: 50rem;
+  text-align: left;
+  cursor: default;
+}
+
+nav h3 {
+  color: var(--forestGreen);
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.hide {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.show {
+  visibility: hidden;
+  height: 0;
+}
+
+
+
+
+
+
+
+/* ====== MEDIA QUERIES ======= */
+
+
+
+/* EXTRA LARGE */
+
+@media (min-width: 1201px) {
+
+  
+}
+
+/* DESKTOPS */
+
+@media (max-width: 1200px) {
+
+  
+}
+
+/* SMALL SCREEN LAPTOPS */
+
+@media (max-width: 1024px) {
+
+  
+}
+
+
+/* TABLETS */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
+  main {
+    width: 100vw;
+    font-size: 1rem;
+    padding: 2rem 0;
+    overflow-x: hidden;
+    border-radius: 0;
+  }
+
+  main article {
+    width: 30rem;
+  }
+
+  #redact-btn {
+    padding: 1rem 2rem;
+    font-size: .9rem;
+  }
+
+  #return-btn, #clear-btn {
+    padding: 0 1.8rem;
+  }
+
+  aside h3 {
+    border-bottom: .1rem double var(--sage);
+    width: 25rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    width: 25rem;
+  } 
+  
+}
+
+/* MOBILE DEVICES */
+
+@media (max-width: 480px) {
+
+  html {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 60%;
+  }
+
+  nav {
+    padding: 2rem;
+  }
+
+  main {
+    max-width: 50rem;
+    font-size: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    margin: 0; 
+    
+  }
+
+  main article {
+    margin: .5rem;
+    width: 19rem;
+
+  }
+  
+  main article .inputBox label {
+    display: block;
+    color: var(--sage);
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  } 
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    
+  }
+
+  .btn {
+    transition: all .1s;
+    padding: .4rem;
+    white-space: nowrap;
+    font-size: .7rem;
+    font-weight: 400;
+      box-shadow: -0.15rem -0.15rem .4rem rgba(255, 255, 255, 0.1), 0.15rem 0.15rem 1rem rgba(10, 50, 10, 0.3);
+  }
+
+  .btn:hover {
+    transform: translate(0);
+  }
+
+  .btn:active, .pinned {
+    transform: scale(.98) translate(0);
+  }
+
+  .quest {
+    padding: .3rem .8rem;
+    font-size: 1rem;
+  }
+
+  .quest:active {
+    transform: scale(.98) translate(0);
+  }
+
+  main article .inputBox .input::placeholder {
+    font-size: 1rem;
+  }
+
+  aside h3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    border-bottom: .1rem double var(--sage);
+    width: 15rem;
+    padding: .5rem;
+  }
+
+  .statRec {
+    margin: .5rem;
+    width: 21rem;
+    font-size: .9rem;
+  }
+
+  #redact-btn {
+    padding: .5rem 1rem;
+    font-size: .9rem;
+  }
+
+  #return-btn, #clear-btn {
+    padding: 0 .7rem;
+  }
+
+}
